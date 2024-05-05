@@ -4,11 +4,11 @@ const path = require('path');
 
 const app = express();
 
-// Configurar CSP para permitir conexiones externas específicas
+// Configurar CSP para permitir conexiones externas y recursos de imagen
 app.use((req, res, next) => {
     res.setHeader(
         "Content-Security-Policy",
-        "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://aframe.io https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://cdn.glitch.global"
+        "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://aframe.io https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://cdn.glitch.global https://cdn.aframe.io; img-src 'self' data:"
     );
     next();
 });
