@@ -4,9 +4,12 @@ const path = require('path');
 
 const app = express();
 
-// Configurar CSP para permitir ejecución de scripts en línea
+// Configurar CSP para permitir scripts externos específicos
 app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';");
+    res.setHeader(
+        "Content-Security-Policy",
+        "default-src 'self'; script-src 'self' 'unsafe-inline' https://aframe.io https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline';"
+    );
     next();
 });
 
