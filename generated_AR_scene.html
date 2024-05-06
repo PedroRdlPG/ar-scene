@@ -7,7 +7,7 @@
           <script src="./scripts/aframe.min.js"></script>
           <script src="./scripts/aframe-extras.misc.min.js"></script>
           <script src="./scripts/super-hands.min.js"></script>
-          <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+          <script src="./scripts/aframe-event-set-component.min.js"></script>
       </head>
       <body>
           <a-scene ar-mode="webxr">
@@ -36,7 +36,7 @@
                   <a-entity id="lhand" mixin="pointer controller-left" line="" raycaster="" super-hands="" vive-controls="" oculus-touch-controls="" windows-motion-controls=""></a-entity>
               </a-entity>
               
-      <a-obj-model id="model-0" src="#obj-model-0" mtl="#mtl-model-0" position="0 1 -1.5" scale="0.0018 0.0018 0.0018"></a-obj-model>
+      <a-obj-model id="model-0" src="#obj-model-0" mtl="#mtl-model-0" class="cube" mixin="cube" position="0 1 -1.5" scale="1 0.0018 0.0018" hoverable grabbable stretchable draggable droppable geometry=""></a-obj-model>
     
           </a-scene>
       </body>
