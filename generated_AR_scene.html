@@ -20,6 +20,10 @@
       <a-asset-item id="obj-model-1" src="https://cdn.glitch.global/0ed16b03-39da-4f91-a736-ca6886f8af50/CANALETA%201.obj?v=1713914004540"></a-asset-item>
       <a-asset-item id="mtl-model-1" src="https://cdn.glitch.global/0ed16b03-39da-4f91-a736-ca6886f8af50/CANALETA%201.mtl?v=1713914024507"></a-asset-item>
     
+
+      <a-asset-item id="obj-model-2" src="https://cdn.glitch.global/0ed16b03-39da-4f91-a736-ca6886f8af50/MDF.obj?v=1713913953052"></a-asset-item>
+      <a-asset-item id="mtl-model-2" src="https://cdn.glitch.global/0ed16b03-39da-4f91-a736-ca6886f8af50/MDF.mtl?v=1713913971359"></a-asset-item>
+    
                   <a-mixin id="pointer" raycaster="showLine: true; objects: .cube, a-link" super-hands="colliderEvent: raycaster-intersection;
                                colliderEventProperty: els;
                                colliderEndEvent:raycaster-intersection-cleared;
@@ -44,6 +48,9 @@
     
 
       <a-obj-model id="model-1" src="#obj-model-1" mtl="#mtl-model-1" class="cube" mixin="cube" position="0 2 -2" scale="0.002 0.002 0.002" hoverable grabbable stretchable draggable droppable geometry=""></a-obj-model>
+    
+
+      <a-obj-model id="model-2" src="#obj-model-2" mtl="#mtl-model-2" class="cube" mixin="cube" position="0 3 -2" scale="0.001 0.001 0.001" hoverable grabbable stretchable draggable droppable geometry=""></a-obj-model>
     
           </a-scene>
       </body>
